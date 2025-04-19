@@ -1,0 +1,390 @@
+/* ===== ESTILOS SECCIÓN ORADORES ===== */
+.speakers-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.section-header h2 span {
+    background: linear-gradient(135deg, #6e48aa, #9d50bb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+    color: #666;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.divider-line {
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #6e48aa, transparent);
+}
+
+.divider i {
+    margin: 0 1rem;
+    color: #6e48aa;
+    font-size: 1.2rem;
+}
+
+/* Filtros */
+.speaker-filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-button {
+    padding: 0.6rem 1.5rem;
+    background: #f0e6ff;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #6e48aa;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.filter-button:hover {
+    background: #d0b8f0;
+}
+
+.filter-button.active {
+    background: #6e48aa;
+    color: white;
+    box-shadow: 0 3px 10px rgba(110, 72, 170, 0.3);
+}
+
+/* Grid de Oradores */
+/* Grid de Oradores - Versión Centrada */
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px)); /* Ancho máximo de 350px */
+    justify-content: center; /* Esto centra las columnas del grid */
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.speaker-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: none; /* Oculto inicialmente para el filtro */
+}
+
+.speaker-card.active {
+    display: block;
+    animation: fadeInUp 0.5s ease;
+}
+
+.speaker-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.speaker-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.speaker-card:hover .speaker-image img {
+    transform: scale(1.05);
+}
+
+.speaker-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(110, 72, 170, 0.9);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.speaker-info {
+    padding: 1.5rem;
+}
+
+.speaker-info h3 {
+    color: #2c3e50;
+    margin-bottom: 0.3rem;
+    font-size: 1.4rem;
+}
+
+.speaker-title {
+    color: #6e48aa;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.speaker-bio p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.speaker-session {
+    background: #f9f5ff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.speaker-session h4 {
+    color: #6e48aa;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.speaker-session p {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.session-details {
+    background: transparent;
+    border: 1px solid #d0b8f0;
+    color: #6e48aa;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.session-details:hover {
+    background: #e0d0f5;
+}
+
+.speaker-social {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.speaker-social a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #f0e6ff;
+    color: #6e48aa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    font-size: 0.8rem;
+}
+
+.speaker-social a:hover {
+    background: #6e48aa;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: white;
+    margin: 3% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: modalFadeIn 0.4s ease;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #aaa;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #6e48aa;
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.modal-left {
+    text-align: center;
+}
+
+.modal-left img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.speaker-name {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.session-time, .session-location {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.modal-right h4 {
+    color: #6e48aa;
+    margin: 1rem 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+.modal-right p {
+    color: #555;
+    line-height: 1.7;
+}
+
+#modalLearnings {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#modalLearnings li {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="%236e48aa"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>') no-repeat left center;
+    padding-left: 25px;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.add-to-schedule, .share-session {
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.add-to-schedule {
+    background: #6e48aa;
+    color: white;
+    border: none;
+}
+
+.add-to-schedule:hover {
+    background: #5d3a99;
+}
+
+.share-session {
+    background: transparent;
+    border: 1px solid #6e48aa;
+    color: #6e48aa;
+}
+
+.share-session:hover {
+    background: #f0e6ff;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .speakers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-left img {
+        max-width: 150px;
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+    }
+}
