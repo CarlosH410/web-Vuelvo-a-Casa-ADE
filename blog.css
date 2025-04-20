@@ -1,0 +1,433 @@
+/* ===== ESTILOS MODERNOS PARA BLOG ===== */
+.blog-modern-section {
+    padding: 4rem 0;
+    background: #f8fafc;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Encabezado */
+.blog-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.blog-title span {
+    background: linear-gradient(90deg, #7c3aed, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.blog-subtitle {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+/* Grid Moderno */
+.modern-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Artículo Tarjeta */
+.modern-article-card {
+    grid-column: span 6;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modern-article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.article-image-wrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.article-main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.modern-article-card:hover .article-main-image {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
+}
+
+.article-content-wrapper {
+    padding: 1.5rem;
+}
+
+.article-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    font-size: 0.85rem;
+}
+
+.article-category {
+    color: #7c3aed;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.article-date {
+    color: #94a3b8;
+}
+
+.article-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.article-excerpt {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #7c3aed;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    color: #a855f7;
+}
+
+.read-more-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.read-more-btn:hover svg {
+    transform: translateX(3px);
+}
+
+.article-stats {
+    display: flex;
+    gap: 1rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #94a3b8;
+    font-size: 0.8rem;
+}
+
+/* Artículo Minimalista */
+.modern-article-minimal {
+    grid-column: span 3;
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+}
+
+.minimal-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.modern-article-minimal .article-title {
+    font-size: 1.1rem;
+    margin: 0.8rem 0 1rem;
+}
+
+.modern-article-minimal .article-excerpt {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.modern-article-minimal .article-footer {
+    margin-top: auto;
+}
+
+.reading-time {
+    color: #94a3b8;
+    font-size: 0.8rem;
+}
+
+.minimal-link {
+    color: #cbd5e1;
+    transition: color 0.3s ease;
+}
+
+.minimal-link:hover {
+    color: #7c3aed;
+}
+
+/* Artículo Horizontal */
+.modern-article-horizontal {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.horizontal-image {
+    flex: 1;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+
+.horizontal-image img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.modern-article-horizontal:hover .horizontal-image img {
+    transform: scale(1.05);
+}
+
+.horizontal-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0 0 12px 12px;
+    flex: 1;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+}
+
+.modern-article-horizontal .article-title {
+    font-size: 1.1rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.text-link {
+    color: #64748b;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.text-link:hover {
+    color: #7c3aed;
+}
+
+/* Artículo Destacado */
+.modern-article-featured {
+    grid-column: span 12;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    border-radius: 12px;
+    padding: 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.featured-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
+    color: #7c3aed;
+    padding: 0.25rem 1rem;
+    border-radius: 0 12px 0 12px;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.featured-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.modern-article-featured .article-title {
+    font-size: 1.75rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.modern-article-featured .article-excerpt {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
+
+.featured-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    color: #7c3aed;
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Navegación */
+.blog-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.view-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #7c3aed;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.view-all-link:hover {
+    color: #a855f7;
+}
+
+.view-all-link svg {
+    transition: transform 0.3s ease;
+}
+
+.view-all-link:hover svg {
+    transform: translateX(3px);
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pagination-arrow, .pagination-number {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: none;
+    background: white;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-number {
+    font-weight: 500;
+}
+
+.pagination-number.active {
+    background: #7c3aed;
+    color: white;
+}
+
+.pagination-arrow:hover, .pagination-number:hover:not(.active) {
+    background: #f1f5f9;
+    color: #7c3aed;
+}
+
+.pagination-arrow.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .modern-article-card {
+        grid-column: span 12;
+    }
+    
+    .modern-article-minimal, .modern-article-horizontal {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-title {
+        font-size: 2rem;
+    }
+    
+    .modern-article-minimal, .modern-article-horizontal {
+        grid-column: span 12;
+    }
+    
+    .blog-navigation {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .modern-article-featured .article-title {
+        font-size: 1.5rem;
+    }
+    
+    .featured-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

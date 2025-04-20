@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanidad Emocional | Evento Cristiano</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <!-- Navbar Moderna -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <img src="img/logo-evento.svg" alt="Logo" class="logo-img">
+                <span class="logo-text">Sanidad<span>Emocional</span></span>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="#acerca" class="nav-link">Acerca</a></li>
+                    <li class="nav-item"><a href="#temas" class="nav-link">Temas <i class="fas fa-chevron-down"></i></a></li>
+                    <li class="nav-item"><a href="#oradores" class="nav-link">Oradores</a></li>
+                    <li class="nav-item"><a href="#registro" class="nav-link btn-register">Registro</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-btn" aria-label="Menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section con Video -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>¡Únete a un evento <span>transformador!</span></h1>
+            <p>Descubre cómo vencer la ansiedad, depresión y estrés con herramientas bíblicas y psicológicas.</p>
+            <a href="#registro" class="cta-button">Regístrate Gratis <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="hero-media">
+            <video autoplay muted loop playsinline poster="images/poster-event.jpg">
+                <source src="assets/video-event.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+    </section>
+
+    <!-- Detalles del Evento -->
+    <section class="event-details">
+        <div class="detail-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>15-17 Nov 2023</h3>
+            <p>Fechas</p>
+        </div>
+        <div class="detail-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Iglesia Centro Cristiano</h3>
+            <p>Ciudad, País</p>
+        </div>
+        <div class="detail-card">
+            <i class="fas fa-clock"></i>
+            <h3>9:00 AM - 6:00 PM</h3>
+            <p>Horario</p>
+        </div>
+    </section>
+
+    <script src="nav.js"></script>
+</body>
+</html>
