@@ -1,13 +1,14 @@
-/* Variables de color */
 :root {
-    --primary: #6e48aa;
-    --secondary: #9d50bb;
-    --accent: #ff6b6b;
-    --dark: #1e1e2c;
-    --light: #f8f9fa;
+    --primary: #e2e0d4;
+    --secondary: #022819;
+    --accent:#ffb703 ;
+    --dark: #1e1e1c;
+    --light: #fbfbfb;
     --white: #ffffff;
     --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
 }
+
+/* Variables de color */
 
 /* Reset y estilos generales */
 * {
@@ -119,12 +120,12 @@ body {
   
   /* ===== BOTÓN REGISTRO ===== */
   .btn-register {
-    background: var(--gradient);
+    background: var(--accent);
     color: var(--white) !important;
     padding: 0.7rem 1.8rem;
     border-radius: 50px;
     transition: all 0.3s;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.788);
     border: none;
     cursor: pointer;
     font-weight: 600;
@@ -277,7 +278,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Overlay oscuro para mejorar legibilidad */
+    background: rgba(0, 0, 0, 0.1); /* Overlay oscuro para mejorar legibilidad */
 }
 
 
@@ -292,7 +293,7 @@ body {
 
 .hero-content h1 span {
     color: var(--primary);
-    background: linear-gradient(135deg, var(--primary), var(--accent));
+    background: var(--accent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -310,7 +311,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: var(--gradient);
+    background: var(--accent);
     color: white;
     padding: 1rem 2rem;
     border-radius: 50px;
@@ -318,6 +319,7 @@ body {
     font-weight: 600;
     transition: all 0.3s;
     box-shadow: 0 4px 15px rgba(110, 72, 170, 0.4);
+    margin-top: 800px;
 }
 
 .cta-button:hover {
@@ -359,7 +361,7 @@ body {
 
 .detail-card i {
     font-size: 2.5rem;
-    color: var(--primary);
+    color: var(--secondary);
     margin-bottom: 1rem;
 }
 
@@ -438,13 +440,13 @@ body {
 }
 
 .section-header h2 span {
-    background: linear-gradient(135deg, #6e48aa, #9d50bb);
+    background:var(--accent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .wave-divider {
-    color: #6e48aa;
+    color:var(--secondary);
     height: 60px;
     overflow: hidden;
     margin-top: -1rem;
@@ -472,12 +474,12 @@ body {
 
 .mission-content h3 {
     font-size: 2rem;
-    color: #2c3e50;
+    color: #324323;
     margin-bottom: 1.5rem;
 }
 
 .mission-content h3 span {
-    color: #6e48aa;
+    color: var(--accent);
 }
 
 .mission-list {
@@ -496,13 +498,13 @@ body {
     position: absolute;
     left: 0;
     top: 3px;
-    color: #9d50bb;
+    color: var(--accent);
 }
 
 .bible-verse {
     font-style: italic;
     font-size: 1.2rem;
-    color: #6e48aa;
+    color:var(--secondary);
     margin: 2rem 0;
     line-height: 1.6;
 }

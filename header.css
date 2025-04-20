@@ -5,6 +5,7 @@
     --accent: #ff6b6b;
     --dark: #1e1e2c;
     --light: #f8f9fa;
+    --white: #ffffff;
     --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
 }
 
