@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="blog.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <section id="temas" class="topics-section">
+    <div class="container">
+        <!-- Encabezado con decoración -->
+        <div class="section-header">
+            <h2>Temas <span>Transformadores</span></h2>
+            <p class="section-subtitle">Enfrentando los desafíos emocionales y espirituales con fe y herramientas prácticas</p>
+            <div class="divider">
+                <div class="divider-line"></div>
+                <i class="fas fa-cross"></i>
+                <div class="divider-line"></div>
+            </div>
+        </div>
+
+        <!-- Pestañas de temas -->
+        <div class="topics-tabs">
+            <button class="tab-button active" data-tab="familia">Familia</button>
+            <button class="tab-button" data-tab="liderasgo">LiderasGO</button>
+            <button class="tab-button" data-tab="dai">DAI</button>
+            <button class="tab-button" data-tab="pecados">Pecados Ocultos</button>
+        </div>
+
+        <!-- Contenido de pestañas -->
+        <div class="tab-content active" id="familia">
+            <div class="topic-grid">
+                <!-- Columna izquierda -->
+                <div class="topic-content">
+                    <h3>Sanando la <span>Familia</span></h3>
+                    <p>El <strong>60% de los jóvenes cristianos</strong> provienen de hogares con fracturas matrimoniales. Aprendamos a sanar:</p>
+                    
+                    <div class="bible-verses">
+                        <div class="verse-card">
+                            <h4>Salmos 68:6</h4>
+                            <p>"Dios hace que el solitario more en familia; saca a los cautivos a prosperidad; mas los rebeldes habitan en tierra seca."</p>
+                            <button class="save-verse" data-verse="Salmos 68:6">
+                                <i class="far fa-bookmark"></i> Guardar
+                            </button>
+                        </div>
+                        <div class="verse-card">
+                            <h4>1 Pedro 4:8</h4>
+                            <p>"Y ante todo, tened entre vosotros ferviente amor; porque el amor cubrirá multitud de pecados."</p>
+                            <button class="save-verse" data-verse="1 Pedro 4:8">
+                                <i class="far fa-bookmark"></i> Guardar
+                            </button>
+                        </div>
+                    </div>
+
+                    <h4 class="tips-title"><i class="fas fa-heart-circle-plus"></i> Consejos para sanación familiar</h4>
+                    <ul class="practical-tips">
+                        <li>
+                            <strong>Perdón generacional:</strong> Rompe las cadenas de dolor familiar
+                            <button class="video-trigger" data-video="perdon-familiar">
+                                <i class="fas fa-play"></i> Ver guía
+                            </button>
+                        </li>
+                        <li>
+                            <strong>Árbol genealógico espiritual:</strong> Identifica patrones y rompe maldiciones
+                            <a href="/downloads/arbol-genealogico.pdf" class="download-link">
+                                <i class="fas fa-download"></i> Plantilla
+                            </a>
+                        </li>
+                        <li>
+                            <strong>Oración de sanidad familiar:</strong> Modelo basado en Nehemías
+                        </li>
+                    </ul>
+
+                    <h4 class="tips-title"><i class="fas fa-hand-holding-heart"></i> Reconstruyendo relaciones</h4>
+                    <ul class="practical-tips">
+                        <li>
+                            <strong>Comunicación asertiva:</strong> Técnica de los 5 niveles de diálogo
+                        </li>
+                        <li>
+                            <strong>Límites saludables:</strong> Cómo amar sin permitir abuso
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna derecha -->
+                <div class="topic-resources">
+                    <div class="testimonial-box">
+                        <div class="testimonial-header">
+                            <img src="img/testimonio-familia.jpg" alt="Testimonio" loading="lazy">
+                            <h4>Daniel R. <span>23 años</span></h4>
+                        </div>
+                        <p>"Mis padres se divorciaron cuando tenía 12 años. Aprendí que aunque mi familia terrenal falló, Dios me da una familia espiritual que nunca me abandonará."</p>
+                        <div class="audio-player">
+                            <audio controls>
+                                <source src="audio/testimonio-familia.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="resource-downloads">
+                        <h4><i class="fas fa-file-pdf"></i> Recursos Familiares</h4>
+                        <ul>
+                            <li>
+                                <a href="/downloads/sanidad-familiar.pdf">
+                                    <i class="fas fa-download"></i> Guía de sanidad para hijos de divorcio
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/downloads/oraciones-familia.pdf">
+                                    <i class="fas fa-download"></i> 21 oraciones por tu familia
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <h4><i class="fas fa-video"></i> Taller: Sanando el Árbol Familiar</h4>
+                        <div class="video-wrapper">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/sanacion-familiar" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="emergency-box">
+                        <h4><i class="fas fa-hands-helping"></i> Grupos de Apoyo</h4>
+                        <p>Conéctate con otros que enfrentan situaciones similares:</p>
+                        <a href="/grupos-apoyo" class="emergency-button">
+                            <i class="fas fa-users"></i> Encuentra tu grupo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido de pestaña LiderasGO -->
+        <div class="tab-content" id="liderasgo">
+            <div class="topic-grid">
+                <!-- Columna izquierda -->
+                <div class="topic-content">
+                    <h3><span>LiderasGO</span> con Propósito</h3>
+                    <p><strong>1 de cada 3 jóvenes líderes</strong> experimenta agotamiento. Desarrolla un liderazgo sostenible:</p>
+                    
+                    <div class="bible-verses">
+                        <div class="verse-card">
+                            <h4>1 Timoteo 4:12</h4>
+                            <p>"Ninguno tenga en poco tu juventud, sino sé ejemplo de los creyentes en palabra, conducta, amor, espíritu, fe y pureza."</p>
+                            <button class="save-verse" data-verse="1 Timoteo 4:12">
+                                <i class="far fa-bookmark"></i> Guardar
+                            </button>
+                        </div>
+                        <div class="verse-card">
+                            <h4>Mateo 20:26-28</h4>
+                            <p>"Mas entre vosotros no será así, sino que el que quiera hacerse grande entre vosotros será vuestro servidor... como el Hijo del Hombre no vino para ser servido, sino para servir."</p>
+                            <button class="save-verse" data-verse="Mateo 20:26-28">
+                                <i class="far fa-bookmark"></i> Guardar
+                            </button>
+                        </div>
+                    </div>
+
+                    <h4 class="tips-title"><i class="fas fa-chess-king"></i> Principios de Liderazgo</h4>
+                    <ul class="practical-tips">
+                        <li>
+                            <strong>Liderazgo servicial:</strong> Modelo de Jesús vs modelos mundanos
+                            <button class="video-trigger" data-video="liderazgo-servicial">
+                                <i class="fas fa-play"></i> Ver enseñanza
+                            </button>
+                        </li>
+                        <li>
+                            <strong>Mentoría espiritual:</strong> Cómo encontrar y ser un mentor
+                        </li>
+                        <li>
+                            <strong>Equilibrio ministerial:</strong> Evitando el burnout en el servicio
+                        </li>
+                    </ul>
+
+                    <h4 class="tips-title"><i class="fas fa-brain"></i> Habilidades Clave</h4>
+                    <ul class="practical-tips">
+                        <li>
+                            <strong>Comunicación efectiva:</strong> Cómo transmitir visión bíblicamente
+                            <a href="/downloads/comunicacion-efectiva.pdf" class="download-link">
+                                <i class="fas fa-download"></i> Guía práctica
+                            </a>
+                        </li>
+                        <li>
+                            <strong>Resolución de conflictos:</strong> Modelo Mateo 18
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna derecha -->
+                <div class="topic-resources">
+                    <div class="testimonial-box">
+                        <div class="testimonial-header">
+                            <img src="img/testimonio-liderasgo.jpg" alt="Testimonio" loading="lazy">
+                            <h4>Ana M. <span>Líder juvenil</span></h4>
+                        </div>
+                        <p>"Quería hacer tanto para Dios que casi destruyo mi salud. Aprendí que el liderazgo no es sobre cuánto hago, sino sobre cuánto me dejo usar por Él."</p>
+                        <div class="audio-player">
+                            <audio controls>
+                                <source src="audio/testimonio-liderasgo.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="resource-downloads">
+                        <h4><i class="fas fa-file-pdf"></i> Kit del Líder</h4>
+                        <ul>
+                            <li>
+                                <a href="/downloads/checklist-lider.pdf">
+                                    <i class="fas fa-download"></i> Evaluación de liderazgo
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/downloads/plan-reunion.pdf">
+                                    <i class="fas fa-download"></i> Guía para planificar reuniones
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/downloads/devocional-lideres.pdf">
+                                    <i class="fas fa-download"></i> Devocional para líderes
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <h4><i class="fas fa-video"></i> Charla: Liderazgo Auténtico</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/liderazgo-autentico" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="infographic-box">
+                        <h4><i class="fas fa-chart-network"></i> Pirámide del Liderazgo Cristiano</h4>
+                        <img src="img/piramide-liderazgo.jpg" alt="Pirámide del Liderazgo" loading="lazy" class="infographic-img">
+                        <a href="/downloads/piramide-liderazgo.jpg" class="download-link full-width">
+                            <i class="fas fa-download"></i> Descargar infografía
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido de pestaña DAI -->
+        <div class="tab-content" id="dai">
+            <div class="topic-grid">
+                <!-- Columna izquierda -->
+                <div class="topic-content">
+                    <h3>Superando <span>DAI</span></h3>
+                    <p>Depresión, Ansiedad e Inseguridad afectan al <strong>70% de los jóvenes</strong> actualmente. Encuentra libertad:</p>
+                    
+                    <div class="bible-verses">
+                        <div class="verse-card">
+                            <h4>Isaías 41:10</h4>
+                            <p>"No temas, porque yo estoy contigo; no desmayes, porque yo soy tu Dios que te esfuerzo; siempre te ayudaré, siempre te sustentaré con la diestra de mi justicia."</p>
+                            <button class="save-verse" data-verse="Isaías 41:10">
+                                <i class="far fa-bookmark"></i> Guardar
+                            </button>
+                        </div>
+                        <div class="verse-card">
+                            <h4>2 Timoteo 1:7</h4>
+                            <p>"Porque no nos ha dado Dios espíritu de cobardía, sino de poder, de amor y de dominio propio."</p>
+                            <button class="save-verse" data-verse="2 Timoteo 1:7">
+                                <i class="far fa-bookmark"></i> Guardar
+                            </button>
+                        </div>
+                    </div>
+
+                    <h4 class="tips-title"><i class="fas fa-brain"></i> Estrategias Integrales</h4>
+                    <ul class="practical-tips">
+                        <li>
+                            <strong>Triángulo del bienestar:</strong> Cuerpo, alma y espíritu en equilibrio
+                            <button class="video-trigger" data-video="triangulo-bienestar">
+                                <i class="fas fa-play"></i> Ver explicación
+                            </button>
+                        </li>
+                        <li>
+                            <strong>Declaraciones de verdad:</strong> Reemplaza mentiras con la Palabra
+                            <a href="/downloads/declaraciones.pdf" class="download-link">
+                                <i class="fas fa-download"></i> Lista de declaraciones
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h4 class="tips-title"><i class="fas fa-heart-circle-check"></i> Identificando Raíces</h4>
+                    <ul class="practical-tips">
+                        <li>
+                            <strong>Análisis DAI:</strong> Cuestionario para identificar causas
+                        </li>
+                        <li>
+                            <strong>Sanidad de heridas:</strong> Proceso paso a paso basado en Salmo 147:3
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna derecha -->
+                <div class="topic-resources">
+                    <div class="testimonial-box">
+                        <div class="testimonial-header">
+                            <img src="img/testimonio-dai.jpg" alt="Testimonio" loading="lazy">
+                            <h4>Luisa F. <span>22 años</span></h4>
+                        </div>
+                        <p>"La ansiedad me impedía salir de casa. Descubrir que Dios me amaba a pesar de mis crisis fue el primer paso hacia mi libertad."</p>
+                        <div class="audio-player">
+                            <audio controls>
+                                <source src="audio/testimonio-dai.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="resource-downloads">
+                        <h4><i class="fas fa-file-pdf"></i> Recursos DAI</h4>
+                        <ul>
+                            <li>
+                                <a href="/downloads/diario-emocional.pdf">
+                                    <i class="fas fa-download"></i> Diario emocional con enfoque bíblico
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/downloads/versiculos-dai.pdf">
+                                    <i class="fas fa-download"></i> Tarjetas de versículos para crisis
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <h4><i class="fas fa-video"></i> Testimonio: De la Oscuridad a la Luz</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/testimonio-dai" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="emergency-box">
+                        <h4><i class="fas fa-circle-exclamation"></i> Ayuda Inmediata</h4>
+                        <p>Si estás en crisis o pensando en autolesionarte:</p>
+                        <a href="tel:+123456789" class="emergency-button">
+                            <i class="fas fa-phone"></i> Línea de Emergencia
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido de pestaña Pecados Ocultos -->
+        <div class="tab-content" id="pecados">
+            <div class="topic-grid">
+                <!-- Columna izquierda -->
+                <div class="topic-content">
+                    <h3>Libertad de <span>Pecados Ocultos</span></h3>
+                    <p><strong>85% de jóvenes cristianos</strong> luchan con pecados secretos. Encuentra verdadera libertad:</p>
+                    
+                    <div class="bible-verses">
+                        <div class="verse-card">
+                            <h4>Salmo 32:3-5</h4>
+                            <p>"Mientras callé, se envejecieron mis huesos... Mi pecado te declaré, y no encubrí mi iniquidad. Dije: Confesaré mis transgresiones a Jehová; y tú perdonaste la maldad de mi pecado."</p>
+                            <button class="save-verse" data-verse="Salmo 32:3-5">
+                                <i class="far fa-bookmark"></i> Guardar
+                            </button>
+                        </div>
+                        <div class="verse-card">
+                            <h4>1 Juan 1:9</h4>
+                            <p>"Si confesamos nuestros pecados, él es fiel y justo para perdonar nuestros pecados, y limpiarnos de toda maldad."</p>
+                            <button class="save-verse" data-verse="1 Juan 1:9">
+                                <i class="far fa-bookmark"></i> Guardar
+                            </button>
+                        </div>
+                    </div>
+
+                    <h4 class="tips-title"><i class="fas fa-user-secret"></i> Rompiendo el Ciclo</h4>
+                    <ul class="practical-tips">
+                        <li>
+                            <strong>Exposición a la luz:</strong> Cómo confesar adecuadamente
+                            <button class="video-trigger" data-video="confesion-saludable">
+                                <i class="fas fa-play"></i> Ver enseñanza
+                            </button>
+                        </li>
+                        <li>
+                            <strong>Plan de rendición de cuentas:</strong> Estructura para mantenerte libre
+                            <a href="/downloads/plan-rendicion.pdf" class="download-link">
+                                <i class="fas fa-download"></i> Descargar guía
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h4 class="tips-title"><i class="fas fa-shield-halved"></i> Estrategias de Protección</h4>
+                    <ul class="practical-tips">
+                        <li>
+                            <strong>Fortalezas espirituales:</strong> Identifica y derriba patrones de pecado
+                        </li>
+                        <li>
+                            <strong>Medios de gracia:</strong> Uso de disciplinas espirituales como protección
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna derecha -->
+                <div class="topic-resources">
+                    <div class="testimonial-box">
+                        <div class="testimonial-header">
+                            <img src="img/testimonio-pecados.jpg" alt="Testimonio" loading="lazy">
+                            <h4>José L. <span>25 años</span></h4>
+                        </div>
+                        <p>"Mi adicción al porno me tenía esclavizado por 7 años. Cuando finalmente me rendí y busqué ayuda, experimenté la verdadera libertad en Cristo."</p>
+                        <div class="audio-player">
+                            <audio controls>
+                                <source src="audio/testimonio-pecados.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="resource-downloads">
+                        <h4><i class="fas fa-file-pdf"></i> Recursos de Libertad</h4>
+                        <ul>
+                            <li>
+                                <a href="/downloads/guia-confesion.pdf">
+                                    <i class="fas fa-download"></i> Guía para confesión saludable
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/downloads/versiculos-libertad.pdf">
+                                    <i class="fas fa-download"></i> Versículos para vencer tentación
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <h4><i class="fas fa-video"></i> Charla: El Poder de la Confesión</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/confesion-libertad" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="emergency-box">
+                        <h4><i class="fas fa-user-shield"></i> Apoyo Confidencial</h4>
+                        <p>Para consejería confidencial sobre luchas secretas:</p>
+                        <a href="/consejeria-confidencial" class="emergency-button">
+                            <i class="fas fa-envelope"></i> Contacta un consejero
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    
+</body>
+</html>

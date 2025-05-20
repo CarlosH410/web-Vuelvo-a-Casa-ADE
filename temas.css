@@ -1,7 +1,19 @@
 /* ===== ESTILOS SECCIÓN TEMAS ===== */
+:root {
+    --primary: #e8e6d9;
+    --secondary: #022819;
+    --tertiary: #2a3a24;
+    --cuaerto: #2d3c1f;
+    --accent: #ffb703;
+    --accent-dark: #e6a500;
+    --dark: #121212;
+    --light: #f8f8f8;
+    --white: #ffffff;
+}
+
 .topics-section {
     padding: 5rem 0;
-    background: #f5f0ff;
+    background: var(--primary);
     position: relative;
 }
 
@@ -12,21 +24,24 @@
 
 .section-header h2 {
     font-size: 2.8rem;
-    color: #2c3e50;
+    color: var(--secondary);
     margin-bottom: 0.5rem;
+    font-weight: 700;
 }
 
 .section-header h2 span {
-    background: linear-gradient(135deg, #6e48aa, #9d50bb);
+    background: linear-gradient(135deg, var(--tertiary), var(--cuaerto));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 700;
 }
 
 .section-subtitle {
-    color: #666;
+    color: var(--tertiary);
     font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto 1.5rem;
+    line-height: 1.6;
 }
 
 .divider {
@@ -39,12 +54,12 @@
 .divider-line {
     width: 100px;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #6e48aa, transparent);
+    background: linear-gradient(90deg, transparent, var(--tertiary), transparent);
 }
 
 .divider i {
     margin: 0 1rem;
-    color: #6e48aa;
+    color: var(--tertiary);
     font-size: 1.2rem;
 }
 
@@ -59,24 +74,25 @@
 
 .tab-button {
     padding: 0.8rem 2rem;
-    background: #e0d0f5;
+    background: var(--light);
     border: none;
     border-radius: 50px;
     font-weight: 600;
-    color: #6e48aa;
+    color: var(--tertiary);
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     font-size: 1rem;
 }
 
 .tab-button:hover {
-    background: #d0b8f0;
+    background: #d8d8d8;
+    transform: translateY(-2px);
 }
 
 .tab-button.active {
-    background: #6e48aa;
-    color: white;
-    box-shadow: 0 5px 15px rgba(110, 72, 170, 0.3);
+    background: var(--tertiary);
+    color: var(--white);
+    box-shadow: 0 5px 15px rgba(42, 58, 36, 0.3);
 }
 
 /* Contenido de pestañas */
@@ -94,21 +110,28 @@
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     margin-top: 2rem;
-    margin: 30px;
+}
+
+@media (max-width: 992px) {
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .topic-content h3 {
     font-size: 2rem;
-    color: #2c3e50;
+    color: var(--secondary);
     margin-bottom: 1.5rem;
+    font-weight: 700;
 }
 
 .topic-content h3 span {
-    color: #6e48aa;
+    color: var(--tertiary);
+    font-weight: 700;
 }
 
 .topic-content p {
-    color: #555;
+    color: var(--tertiary);
     margin-bottom: 2rem;
     line-height: 1.7;
 }
@@ -121,18 +144,24 @@
 }
 
 .verse-card {
-    background: white;
+    background: var(--white);
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-    border-left: 4px solid #6e48aa;
+    border-left: 4px solid var(--tertiary);
     position: relative;
+    transition: transform 0.3s ease;
+}
+
+.verse-card:hover {
+    transform: translateY(-5px);
 }
 
 .verse-card h4 {
-    color: #6e48aa;
+    color: var(--tertiary);
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .verse-card p {
@@ -143,35 +172,40 @@
 
 .save-verse {
     background: transparent;
-    border: 1px solid #e0d0f5;
-    color: #6e48aa;
+    border: 1px solid #d8d8d8;
+    color: var(--tertiary);
     padding: 0.3rem 0.8rem;
     border-radius: 50px;
     font-size: 0.8rem;
     cursor: pointer;
     transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
 .save-verse:hover {
-    background: #f0e6ff;
+    background: #e8e8e8;
 }
 
 /* Consejos prácticos */
 .tips-title {
-    color: #6e48aa;
+    color: var(--tertiary);
     margin: 2rem 0 1rem;
     font-size: 1.2rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-weight: 600;
 }
 
-.practical-tips {
+.practical-tips, .warning-signs {
     list-style: none;
+    padding-left: 0;
 }
 
-.practical-tips li {
-    background: white;
+.practical-tips li, .warning-signs li {
+    background: var(--white);
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 8px;
@@ -179,16 +213,22 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.practical-tips li:hover, .warning-signs li:hover {
+    transform: translateX(5px);
 }
 
 .practical-tips strong {
-    color: #2c3e50;
+    color: var(--secondary);
+    font-weight: 600;
 }
 
 .video-trigger, .download-link {
     align-self: flex-start;
-    background: #f0e6ff;
-    color: #6e48aa;
+    background: #e8e8e8;
+    color: var(--tertiary);
     padding: 0.3rem 0.8rem;
     border-radius: 50px;
     font-size: 0.8rem;
@@ -199,11 +239,17 @@
     margin-top: 0.5rem;
     border: none;
     cursor: pointer;
+    transition: all 0.3s;
+}
+
+.video-trigger:hover, .download-link:hover {
+    background: #d8d8d8;
+    color: var(--secondary);
 }
 
 /* Columna derecha */
 .testimonial-box {
-    background: white;
+    background: var(--white);
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
@@ -222,11 +268,13 @@
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
+    border: 2px solid var(--primary);
 }
 
 .testimonial-header h4 {
-    color: #2c3e50;
+    color: var(--secondary);
     margin-bottom: 0.2rem;
+    font-weight: 600;
 }
 
 .testimonial-header span {
@@ -238,6 +286,7 @@
     color: #555;
     font-style: italic;
     margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .audio-player {
@@ -247,11 +296,13 @@
 
 audio {
     width: 100%;
+    border-radius: 50px;
+    height: 40px;
 }
 
 /* Recursos descargables */
 .resource-downloads {
-    background: white;
+    background: var(--white);
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
@@ -259,15 +310,17 @@ audio {
 }
 
 .resource-downloads h4 {
-    color: #6e48aa;
+    color: var(--tertiary);
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-weight: 600;
 }
 
 .resource-downloads ul {
     list-style: none;
+    padding-left: 0;
 }
 
 .resource-downloads li {
@@ -275,7 +328,7 @@ audio {
 }
 
 .resource-downloads a {
-    color: #555;
+    color: var(--tertiary);
     text-decoration: none;
     transition: color 0.3s;
     display: flex;
@@ -285,23 +338,26 @@ audio {
 }
 
 .resource-downloads a:hover {
-    color: #6e48aa;
+    color: var(--secondary);
+    text-decoration: underline;
 }
 
 /* Video */
 .video-container {
-    background: white;
+    background: var(--white);
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
 }
 
 .video-container h4 {
-    color: #6e48aa;
+    color: var(--tertiary);
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-weight: 600;
 }
 
 .video-wrapper {
@@ -309,6 +365,7 @@ audio {
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
     overflow: hidden;
+    border-radius: 8px;
 }
 
 .video-wrapper iframe {
@@ -317,47 +374,62 @@ audio {
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-    .topic-grid {
-        grid-template-columns: 1fr;
-    }
+/* Estilos específicos para cada tema */
+#familia .verse-card,
+#familia .tab-button.active {
+    border-left-color: var(--tertiary);
+    background: var(--tertiary);
+    color: var(--white);
 }
 
-@media (max-width: 768px) {
-    .section-header h2 {
-        font-size: 2.2rem;
-    }
-    
-    .tab-button {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-    }
+#familia .verse-card h4,
+#familia .tab-button.active {
+    color: var(--white);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+#liderasgo .verse-card,
+#liderasgo .tab-button.active {
+    border-left-color: var(--cuaerto);
+    background: var(--cuaerto);
+    color: var(--white);
 }
 
-
-
-
-/* Estilos adicionales para Depresión y Estrés */
-.warning-signs {
-    list-style: none;
-    margin: 1.5rem 0;
+#liderasgo .verse-card h4,
+#liderasgo .tab-button.active {
+    color: var(--white);
 }
 
+#dai .verse-card,
+#dai .tab-button.active {
+    border-left-color: var(--secondary);
+    background: var(--secondary);
+    color: var(--white);
+}
+
+#dai .verse-card h4,
+#dai .tab-button.active {
+    color: var(--white);
+}
+
+#pecados .verse-card,
+#pecados .tab-button.active {
+    border-left-color: #5a3921;
+    background: #5a3921;
+    color: var(--white);
+}
+
+#pecados .verse-card h4,
+#pecados .tab-button.active {
+    color: var(--white);
+}
+
+/* Estilos de emergencia y especiales */
 .warning-signs li {
     background: #fff8f8;
-    border-left: 4px solid #ff6b6b;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 0 8px 8px 0;
+    border-left: 4px solid var(--accent-dark);
 }
 
 .emergency-box {
@@ -366,29 +438,33 @@ audio {
     border-radius: 10px;
     margin-top: 2rem;
     text-align: center;
-    border: 1px dashed #ff6b6b;
+    border: 1px dashed var(--accent-dark);
 }
 
 .emergency-box h4 {
-    color: #ff6b6b;
+    color: var(--accent-dark);
     margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 .emergency-button {
     display: inline-block;
-    background: #ff6b6b;
-    color: white !important;
+    background: var(--accent-dark);
+    color: var(--white) !important;
     padding: 0.8rem 1.5rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
     margin-top: 1rem;
     transition: all 0.3s;
+    border: none;
+    cursor: pointer;
 }
 
 .emergency-button:hover {
-    background: #e05555;
+    background: #cc8a00;
     transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(230, 165, 0, 0.3);
 }
 
 .infographic-box {
@@ -400,31 +476,52 @@ audio {
     border-radius: 10px;
     margin: 1rem 0;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
 }
 
 .download-link.full-width {
     display: block;
     text-align: center;
     margin-top: 0.5rem;
+    width: 100%;
 }
 
-/* Colores específicos para cada tema */
-#depresion .verse-card,
-#depresion .tab-button.active {
-    border-left-color: #9d50bb;
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-#depresion .verse-card h4,
-#depresion .tab-button.active {
-    color: #9d50bb;
+/* Responsive */
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .tab-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .topic-content h3 {
+        font-size: 1.8rem;
+    }
 }
 
-#estres .verse-card,
-#estres .tab-button.active {
-    border-left-color: #6e48aa;
-}
-
-#estres .verse-card h4,
-#estres .tab-button.active {
-    color: #6e48aa;
+@media (max-width: 576px) {
+    .topics-section {
+        padding: 3rem 0;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .topic-grid {
+        gap: 2rem;
+    }
 }
