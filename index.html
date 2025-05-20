@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuelvo a Casa | Bet-el</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="page2.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="evento.css">
     <link rel="stylesheet" href="temas.css">
     <link rel="stylesheet" href="oradores.css">
     <link rel="stylesheet" href="faq.css">
@@ -14,63 +15,50 @@
 </head>
 <body>
     <!-- Navbar Moderna -->
-     <!-- Header -->
+    <!-- Header -->
+    
     <header class="main-header">
-        <div class="header-container">
-            <a href="#" class="logo">
-                <img src="img/Logo-vuelvo a blanco_Mesa de trabajo 1.png" alt="Logo" class="logo-img" width="120px">
-                
+        <div class="header-container container"> <!-- Agregar clase container para mejor control -->
+            <a href="#" class="logo" aria-label="Página de inicio">
+                <img src="img/Logo Vuelvo a Casa_Mesa de trabajo 1.png" alt="Logo del evento" 
+                     class="logo-img" width="120" height="auto"> <!-- Mejor alt text y añadir height -->
             </a>
             
-            <nav>
+            <nav aria-label="Navegación principal">
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="#inicio" class="nav-link active">Inicio</a></li> <!-- Añadir active al item actual -->
                     <li class="nav-item"><a href="#acerca" class="nav-link">Acerca</a></li>
-                    <li class="nav-item"><a href="#temas" class="nav-link">Temas <i class="fas fa-chevron-down"></i></a></li>
+                    <li class="nav-item dropdown"> <!-- Mejor estructura para dropdown -->
+                        <a href="#temas" class="nav-link">Temas <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                        <!-- Podrías añadir aquí un submenú si es necesario -->
+                    </li>
                     <li class="nav-item"><a href="#oradores" class="nav-link">Oradores</a></li>
                     <li class="nav-item"><a href="#registro" class="nav-link btn-register">Registro</a></li>
                 </ul>
             </nav>
             
-            <button class="mobile-menu-btn" aria-label="Menú">
-                <i class="fas fa-bars"></i>
-            </button>
+            
         </div>
-    </header>
+    </header>  
 
     <!-- Hero Section con Video -->
     <section id="inicio" class="hero">
-        <div class="hero-content">
-           
-            <a href="#registro" class="cta-button">Regístrate Gratis <i class="fas fa-arrow-right"></i></a>
-        </div>
         <div class="hero-media">
             <img src="img/04_Background.png" alt="Evento Transformador">
-            <div class="image-overlay"></div> <!-- Cambiado de video-overlay a image-overlay -->
+            <div class="image-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <!-- Contenido adicional si lo necesitas -->
+            <a href="#registro" class="cta-button">Regístrate Gratis <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
+
+
+    
     
 
     
 
-    <!-- Detalles del Evento -->
-    <section class="event-details">
-        <div class="detail-card">
-            <i class="fas fa-calendar-alt"></i>
-            <h3>15-17 Nov 2023</h3>
-            <p>Fechas</p>
-        </div>
-        <div class="detail-card">
-            <i class="fas fa-map-marker-alt"></i>
-            <h3>Iglesia Centro Cristiano</h3>
-            <p>Ciudad, País</p>
-        </div>
-        <div class="detail-card">
-            <i class="fas fa-clock"></i>
-            <h3>9:00 AM - 6:00 PM</h3>
-            <p>Horario</p>
-        </div>
-    </section>
 
 
     <!-- Sección Acerca del Evento -->
@@ -128,8 +116,34 @@
                     </div>
                 </div>
             </div>
+        </div>
+            
+
     
-            <!-- Testimonios -->
+    </section>
+
+
+    <!-- Detalles del Evento -->
+    <section class="event-details">
+        <div class="detail-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>15-17 Nov 2023</h3>
+            <p>Fechas</p>
+        </div>
+        <div class="detail-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Iglesia Centro Cristiano</h3>
+            <p>Ciudad, País</p>
+        </div>
+        <div class="detail-card">
+            <i class="fas fa-clock"></i>
+            <h3>9:00 AM - 6:00 PM</h3>
+            <p>Horario</p>
+        </div>
+    </section>
+
+    <section>
+        <!-- Testimonios -->
             <div class="testimonials-section">
                 <h3>Voces que <span>inspiran</span></h3>
                 <div class="testimonials-slider">
@@ -167,8 +181,6 @@
                 </div>
             </div>
         </div>
-
-    
     </section>
 
     <section id="temas" class="topics-section">
